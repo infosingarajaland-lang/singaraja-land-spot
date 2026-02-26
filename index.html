@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <title>Singaraja Land Spot</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    margin: 0;
+    color: #f1f1f1;
+        }
+
+        header {
+            background-color: #0d1b2a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 30px auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .btn-detail {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #0d1b2a;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 8px;
+}
+
+.btn-detail:hover {
+    background-color: #1b263b;
+}
+
+        .card {
+    background: #1c2b36;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.4);
+    transition: all 0.3s ease;
+    color: #f1f1f1;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
+}
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+        .price {
+            color: #ffd700; /* emas */
+    font-weight: bold;
+    font-size: 18px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: #1da851;
+        }
+
+        footer {
+            footer {
+    background-color: #0f2027;
+    color: #ddd;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+        }
+
+        /* ===== NAVBAR PREMIUM ===== */
+
+.navbar {
+    position: absolute; /* penting supaya menyatu dengan hero */
+    top: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 999;
+    background: transparent;
+}
+
+.nav-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 80px;
+}
+
+.logo {
+     display: flex;
+    align-items: center;
+    gap: 18px;
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 38px;
+    letter-spacing: 1px;
+}
+
+.logo img {
+    height: 70px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 20px; /* tambahkan ini */
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.nav-menu li a:hover {
+    color: #1db954;
+}
+
+/* Supaya konten tidak tertutup navbar */
+.container {
+    margin-top: 120px;
+}
+      
+/* ===== HERO SECTION ===== */
+
+.hero {
+    margin-top: 0;
+    position: relative;
+    height: 100vh;
+    background: url('images/home-page/hero-section.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding-left: 8%;
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    top: 0;
+    left: 0;
+}
+
+.hero-content {
+    position: relative;
+    max-width: 600px;
+    z-index: 2;
+}
+
+.hero-tag {
+    background: rgba(29, 185, 84, 0.2);
+    color: #1db954;
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.hero h1 span {
+    color: #1db954;
+}
+
+.hero-desc {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #ddd;
+}
+
+.hero-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 25px;
+    background: #1db954;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background: #17a44a;
+}
+
+/* ===== RESPONSIVE MOBILE ===== */
+@media (max-width: 768px) {
+
+    .nav-container {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .nav-menu li a {
+        font-size: 16px;
+    }
+
+    .logo {
+        font-size: 24px;
+        justify-content: center;
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    .hero {
+        height: auto;
+        padding: 140px 20px 60px 20px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-desc {
+        font-size: 14px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .container {
+        margin-top: 40px;
+    }
+
+}
+
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+
+        <div class="logo">
+            <img src="images/home-page/logo.png" alt="Logo">
+            <span>Singaraja Land Spot</span>
+        </div>
+
+        <ul class="nav-menu">
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#">Tipe Properti</a></li>
+            <li><a href="#">Area</a></li>
+            <li><a href="#">Galeri</a></li>
+            <li><a href="#">Kontak</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+<section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        <p class="hero-tag">Eksklusif Properti di Bali Utara</p>
+
+        <h1>
+            Listing Pilihan <br>
+            <span>Terbaik & Legal</span> <br>
+            di Singaraja.
+        </h1>
+
+        <p class="hero-desc">
+            Temukan investasi properti terbaik dengan lokasi strategis,
+            legalitas aman, dan harga kompetitif.
+        </p>
+
+        <a href="#" class="hero-btn">Lihat Penawaran</a>
+    </div>
+
+</section>
+
+<div class="container">
+
+    <div class="grid">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994" alt="Rumah Indent Banyuning Jalan Pulau Batam - Premium">
+            <a href="detail-rumah-indent-banyuning-jalan-pulau-batam-premium.html" class="btn-detail">Lihat Detail</a>
+
+            <h2>Rumah Indent Banyuning Jalan Pulau Batam - Premium</h2>
+            <p>Type Standar 36/80</p>
+            <p>2 KT | 1 KM</p>
+            <p class="price">Rp 450 Juta</p>
+            <a href="https://wa.me/6282335959209" target="_blank" class="btn">Chat WhatsApp</a>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae" alt="Rumah Indent Banyuning Jalan Pulau Batam - Punglor 3">
+            <a href="detail-rumah-indent-banyuning-jalan-pulau-batam-punglor-3.html" class="btn-detail">Lihat Detail</a>
+
+            <h2>Rumah Indent Banyuning Jalan Pulau Batam - Punglor 3</h2>
+            <p>Type Standar 36/80</p>
+            <p>2 KT | 1 KM</p>
+            <p class="price">Rp 415 Juta</p>
+            <a href="https://wa.me/6281234567890" target="_blank" class="btn">Chat WhatsApp</a>
+        </div>
+
+        <div class="card">
+            <img src="images/rumah-indent-padang-keling-banyuning/rumah-indent-padang-keling-banyuning-001.jpg" alt="Rumah Indent Padang Keling - Banyuning">
+            <a href="detail-rumah-indent-padang-keling-banyuning.html" class="btn-detail">Lihat Detail</a>
+
+            <h2>Rumah Indent Padang Keling - Banyuning</h2>
+            <p>Type Standar 36/80</p>
+            <p>2 KT | 1 KM</p>
+            <p class="price">Rp 375 Juta</p>
+            <a href="https://wa.me/6282335959209" target="_blank" class="btn">Chat WhatsApp</a>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Singaraja Land Spot | Buleleng - Bali
+</footer>
+
+</body>
+</html>
