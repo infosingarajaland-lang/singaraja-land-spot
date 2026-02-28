@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rumah Indent Padang Keling - Banyuning</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+
+        <div class="logo">
+            <img src="images/home-page/logo.png" alt="Logo">
+            <span>Singaraja Land Spot</span>
+        </div>
+
+        <ul class="nav-menu">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="#">Tipe Properti</a></li>
+            <li><a href="#">Area</a></li>
+            <li><a href="#">Galeri</a></li>
+            <li><a href="#">Kontak</a></li>
+        </ul>
+
+    </div>
+</nav>    
+
+<div class="wrapper">
+
+    <div class="property-layout">
+
+        <!-- SLIDER KIRI -->
+        <div class="slider">
+
+            <div class="slides">
+                <img src="images/rumah-indent-padang-keling-banyuning/rumah-indent-padang-keling-banyuning-001.jpg">
+            </div>
+
+            <div class="slides">
+                <img src="images/rumah-indent-padang-keling-banyuning/rumah-indent-padang-keling-banyuning-002.jpg">
+            </div>
+
+            <div class="slides">
+                <img src="images/rumah-indent-padang-keling-banyuning/rumah-indent-padang-keling-banyuning-003.jpg">
+            </div>
+
+            <div class="prev" onclick="plusSlides(-1)">❮</div>
+            <div class="next" onclick="plusSlides(1)">❯</div>
+
+        </div>
+
+        <!-- PANEL DETAIL KANAN -->
+        <div class="property-card">
+
+            <h1>Rumah Indent Padang Keling - Banyuning</h1>
+
+            <div class="price">Rp 375 Juta</div>
+
+            <h3>Spesifikasi:</h3>
+            <ul>
+                <li>Type 38/80</li>
+                <li>2 Kamar Tidur</li>
+                <li>1 Kamar Mandi</li>
+                <li>Carport</li>
+                <li>Listrik 1300 Watt</li>
+                <li>Air PDAM</li>
+            </ul>
+
+            <a href="https://wa.me/6282335959209" target="_blank" class="btn-wa">
+                Hubungi via WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function plusSlides(n) {
+    slideIndex += n;
+    showSlides();
+}
+
+function showSlides() {
+    let slides = document.getElementsByClassName("slides");
+
+    if (slideIndex >= slides.length) { slideIndex = 0 }
+    if (slideIndex < 0) { slideIndex = slides.length - 1 }
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    slides[slideIndex].style.display = "block";
+}
+
+setInterval(function(){
+    slideIndex++;
+    showSlides();
+}, 5000);
+</script>
+
+</body>
+</html>
