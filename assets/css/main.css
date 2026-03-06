@@ -52,9 +52,10 @@ body {
 .logo span {
   font-size: 18px;
   font-weight: bold;
+  color: #fff;
 }
 
-/* NAV LINKS */
+/* NAV LINKS (DESKTOP) - Sudah Digabung */
 .nav-links {
   display: flex;
   list-style: none;
@@ -72,11 +73,17 @@ body {
   color: #22c55e;
 }
 
+/* Sembunyikan header sidebar di desktop */
+.nav-links .sidebar-header {
+  display: none;
+}
+
 /* BURGER */
 .menu-toggle {
   display: none;
   font-size: 26px;
   cursor: pointer;
+  color: #fff;
 }
 
 /* OVERLAY */
@@ -102,13 +109,14 @@ body {
    HERO SECTION
 =================================*/
 .hero {
-  height: 100vh;
+  height: 50vh;
   background: url('../img/hero/hero.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   padding: 0 20px;
   position: relative;
   margin-top: 70px;
+  margin-bottom: 40px;
 }
 
 .hero-overlay {
@@ -148,6 +156,104 @@ body {
   text-decoration: none;
   border-radius: 6px;
   font-weight: bold;
+}
+
+/* ===============================
+   SEARCH FILTER SECTION
+=================================*/
+.search-filter-section {
+    background: #0f172a; /* Samakan dengan body atau buat sedikit kontras */
+    padding: 0 20px;
+    
+    position: relative;
+    z-index: 20;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-filter-box {
+    background: #1e293b; /* Warna box form */
+    padding: 25px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap; /* Responsif jika sempit */
+    gap: 15px;
+    align-items: flex-end; /* Sejajar bawah */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.filter-group {
+    flex: 1; /* Membagi lebar sama rata */
+    display: flex;
+    flex-direction: column;
+    min-width: 200px; /* Lebar minimum sebelum pindah baris */
+}
+
+.filter-group label {
+    font-size: 12px;
+    font-weight: bold;
+    color: #94a3b8;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.filter-group input,
+.filter-group select {
+    background: #0f172a;
+    border: 1px solid #334155;
+    color: #fff;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.filter-group input:focus,
+.filter-group select:focus {
+    border-color: #22c55e;
+}
+
+.btn-search-submit {
+    background: #22c55e;
+    color: #000;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+    height: 46px; /* Samakan tinggi dengan input */
+}
+
+.btn-search-submit:hover {
+    background: #16a34a;
+}
+
+/* RESPONSIVE SEARCH */
+@media (max-width: 768px) {
+    .search-filter-section {
+        margin-top: 20px; /* Hilangkan efek mengambang di HP */
+        padding: 0 15px;
+    }
+
+    .search-filter-box {
+        flex-direction: column; /* Susun vertikal */
+        align-items: stretch; /* Lebar penuh */
+        padding: 20px;
+    }
+
+    .filter-group {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .btn-search-submit {
+        width: 100%; /* Tombol penuh */
+        margin-top: 5px;
+    }
 }
 
 /* ===============================
@@ -213,18 +319,14 @@ body {
 
 .property-layout {
   display: flex;
-  /* PERUBAHAN 1: Mengubah arah layout dari kiri-kanan menjadi atas-bawah */
   flex-direction: column;
-  /* PERUBAHAN 2: Membuat slider (dan card) berada di posisi tengah */
   align-items: center;
   gap: 30px;
 }
 
 /* SLIDER */
 .slider {
-  /* PERUBAHAN 3: Menghapus 'flex: 1' agar tidak memaksakan lebar penuh saat di kolom */
-  /* flex: 1; <- dihapus */
-  width: 100%; /* Lebar penuh agar tampilan slider besar di tengah */
+  width: 100%;
   position: relative;
 }
 
@@ -247,7 +349,7 @@ body {
   padding: 8px 12px;
   cursor: pointer;
   border-radius: 5px;
-  color: #fff; /* Ditambahkan agar icon terlihat jelas */
+  color: #fff;
 }
 
 .prev { left: 10px; }
@@ -255,25 +357,22 @@ body {
 
 /* PROPERTY CARD */
 .property-card {
-  /* PERUBAHAN 4: Menghapus 'flex: 1' agar card menyesuaikan konten */
-  /* flex: 1; <- dihapus */
-  width: 100%; /* Membuat card selebar slider di atasnya */
+  width: 100%;
   background: #1e293b;
   padding: 20px;
   border-radius: 10px;
-  color: #fff; /* Ditambahkan agar teks terlihat jelas di background gelap */
+  color: #fff;
 }
 
 .property-card h1 {
   margin-bottom: 10px;
 }
 
-/* PRICE STYLE */
 .property-card .price {
-  font-size: 1.5em;       /* Membuat ukuran font 2x lebih besar dari ukuran normal di dalam card */
-  font-weight: bold;    /* Membuat teks menjadi tebal agar menonjol */
-  margin-bottom: 15px;  /* Memberi jarak ke bawah */
-  color: #22c55e;       /* Opsional: Memberi warna hijau agar mirip tombol WA */
+  font-size: 1.5em; /* Ukuran 1.5x. Jika ingin 2x ganti jadi 2em */
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #22c55e;
 }
 
 .property-card ul {
@@ -292,32 +391,81 @@ body {
 }
 
 /* ===============================
+   DETAIL PROPERTY SPACING
+================================ */
+
+/* Jarak antar section spesifikasi property */
+.property-card h3 {
+margin-top: 30px;
+margin-bottom: 10px;
+}
+
+/* Jarak antar section property */
+.property-card h2 {
+margin-top: 30px;
+margin-bottom: 10px;
+}
+
+/* Jarak paragraf deskripsi */
+.property-card p {
+margin-bottom: 15px;
+line-height: 1.6;
+}
+
+/* Video container */
+.video-container {
+margin-top: 20px;
+border-radius: 10px;
+overflow: hidden;
+}
+
+/* Responsive video */
+.video-container iframe {
+width: 100%;
+height: 630px;
+border: none;
+}
+
+/* ===============================
+   RESPONSIVE YOUTUBE
+=================================*/
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* rasio 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ===============================
    RESPONSIVE
 =================================*/
 @media (max-width: 768px) {
 
+  /* Tampilkan Burger */
   .menu-toggle {
     display: block;
   }
 
-  .nav-links {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    height: 100%;
-    width: 260px;
-    background: #0f172a;
-    flex-direction: column;
-    padding: 80px 20px;
-    gap: 20px;
-    transition: 0.3s;
-    z-index: 1001;
+  /* Overlay */
+  .overlay {
+    z-index: 998;
+    backdrop-filter: blur(4px);
   }
 
-  .nav-links.active {
-    right: 0;
-  }
-
+  /* Layout Properti */
   .property-layout {
     flex-direction: column;
   }
@@ -326,83 +474,96 @@ body {
     font-size: 28px;
   }
 
+  .hero {
+    height: auto; /* Di HP, tinggi menyesuaikan isi teks */
+    padding: 100px 20px 60px 20px; /* Tambah padding agar tidak mepet */
+  }
+
+  
   /* =============================
-   BURGER MENU MOBILE PREMIUM
-============================= */
+     SIDEBAR NAVIGASI (PREMIUM)
+  ============================= */
 
-.menu-toggle {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-    color: white;
-}
-
-/* Overlay background */
-.overlay {
+  /* 1. Posisi Sidebar */
+  .nav-links {
     position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.6);
-    backdrop-filter: blur(4px);
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.3s ease;
-    z-index: 998;
-}
+    top: 0;
+    left: -100%; 
+    height: 100vh;
+    width: 85%;
+    max-width: 320px;
+    background: #0e0f12;
+    padding: 0 0 40px 0; 
+    display: flex;
+    flex-direction: column;
+    transition: 0.35s ease;
+    z-index: 1001; /* Ini sudah benar, di atas Navbar */
+    overflow-y: auto;
+  }
 
-.overlay.active {
-    opacity: 1;
-    visibility: visible;
-}
+  .nav-links.active {
+    left: 0;
+  }
 
-/* Sidebar menu */
-@media (max-width: 768px) {
+  /* 2. Header Sidebar (Logo + X) */
+  .nav-links .sidebar-header {
+    display: flex; /* Paksa muncul di mobile */
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 10px;
+    background: #0e0f12;
+  }
 
-    .menu-toggle {
-        display: block;
-    }
+  .nav-links .sidebar-header .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
 
-    .nav-links {
-        position: fixed;
-        top: 0;
-        left: -100%;
-        height: 100vh;
-        width: 85%;
-        max-width: 320px;
+  .nav-links .sidebar-header .brand img {
+    height: 35px;
+  }
 
-        background: #0e0f12;
-        padding: 100px 30px 40px 30px;
+  .nav-links .sidebar-header .brand span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+  }
 
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 28px;
+  /* 3. Tombol Close */
+  .nav-links .close-menu {
+    font-size: 32px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s ease;
+    line-height: 1;
+  }
 
-        transition: 0.35s ease;
-        z-index: 999;
-    }
+  .nav-links .close-menu:hover {
+    color: #22c55e;
+    transform: rotate(90deg);
+  }
 
-    .nav-links.active {
-        left: 0;
-    }
+  /* 4. Item Menu */
+  .nav-links li {
+    width: 100%;
+  }
 
-    .nav-links li {
-        width: 100%;
-    }
+  .nav-links a {
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+    display: block;
+    padding: 12px 25px;
+    transition: 0.2s ease;
+  }
 
-    .nav-links a {
-        font-size: 20px;
-        font-weight: 500;
-        color: #ffffff;
-        text-decoration: none;
-        display: block;
-        width: 100%;
-        padding: 6px 0;
-        transition: 0.2s ease;
-    }
-
-    .nav-links a:hover {
-        color: #22c55e;
-        padding-left: 8px;
-    }
-
+  .nav-links a:hover {
+    background: rgba(255,255,255,0.05);
+    color: #22c55e;
+    padding-left: 30px;
+  }
+  
 }

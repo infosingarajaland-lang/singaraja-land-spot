@@ -12,21 +12,32 @@
 <nav class="navbar">
     <div class="nav-container">
 
+        <!-- Logo Utama di Navbar Atas -->
         <div class="logo">
             <img src="../assets/img/logo/logo-primary.png" alt="Logo">
-            <span>Singaraja Land Spot</span>
+            <span></span>
         </div>
 
-        <!-- BURGER BUTTON -->
+        <!-- Tombol Burger -->
         <div class="menu-toggle" id="menu-toggle">
             ☰
         </div>
 
         <ul class="nav-links" id="nav-links">
+            
+            <!-- HEADER SIDEBAR (Hanya muncul di HP) -->
+            <li class="sidebar-header">
+                <div class="brand">
+                    <img src="../assets/img/logo/logo-primary.png" alt="Logo">
+                    
+                </div>
+                <!-- Penting: Pastikan ada id="close-menu" -->
+                <div class="close-menu" id="close-menu">&times;</div>
+            </li>
+
+            <!-- Menu Links -->
             <li><a href="../index.html">Beranda</a></li>
             <li><a href="#">Tipe Properti</a></li>
-            <li><a href="#">Area</a></li>
-            <li><a href="#">Galeri</a></li>
             <li><a href="#">Kontak</a></li>
         </ul>
 
@@ -76,6 +87,10 @@
 
             <div class="price">Rp 375 Juta</div>
 
+            <a href="https://wa.me/6282335959209" target="_blank" class="btn-wa">
+                Hubungi via WhatsApp
+            </a>
+
             <h3>Spesifikasi:</h3>
             <ul>
                 <li>Type Standar 36/80</li>
@@ -86,12 +101,28 @@
                 <li>Air PDAM</li>
             </ul>
 
-            <a href="https://wa.me/6282335959209" target="_blank" class="btn-wa">
-                Hubungi via WhatsApp
-            </a>
+            <h2>Deskripsi</h2>
+            <p>
+            Graha Padangkeling hadir sebagai pilihan hunian modern dengan konsep sederhana namun tetap fungsional. Dirancang untuk keluarga muda maupun sebagai aset investasi, perumahan ini menawarkan lingkungan yang tertata dengan jumlah unit terbatas sehingga lebih nyaman dan tidak padat.
+            </p>
+
+            <p>
+            Hunian ini cocok bagi Anda yang mencari rumah pertama dengan harga terjangkau namun tetap memiliki kualitas bangunan yang jelas dan spesifikasi yang transparan.
+            </p>
+
+            <h2 class="video-title">🎥 Video Preview</h2>
+
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/kr8at4PRL1g"
+            title="Video Rumah Indent Banyuning"
+            allowfullscreen>
+            </iframe>
+</div>
+              
 
         </div>
 
+        
     </div>
 
 </div>

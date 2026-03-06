@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Rumah Indent Padang Keling - Banyuning</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rumah Indent Banyuning Jalan Pulau Batam - Premium</title>
+<link rel="stylesheet" href="../assets/css/main.css">
 </head>
 
 <body>
@@ -10,16 +12,32 @@
 <nav class="navbar">
     <div class="nav-container">
 
+        <!-- Logo Utama di Navbar Atas -->
         <div class="logo">
-            <img src="images/home-page/logo.png" alt="Logo">
-            <span>Singaraja Land Spot</span>
+            <img src="../assets/img/logo/logo-primary.png" alt="Logo">
+            <span></span>
         </div>
 
-        <ul class="nav-menu">
-            <li><a href="index.html">Beranda</a></li>
+        <!-- Tombol Burger -->
+        <div class="menu-toggle" id="menu-toggle">
+            ☰
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+            
+            <!-- HEADER SIDEBAR (Hanya muncul di HP) -->
+            <li class="sidebar-header">
+                <div class="brand">
+                    <img src="../assets/img/logo/logo-primary.png" alt="Logo">
+                    
+                </div>
+                <!-- Penting: Pastikan ada id="close-menu" -->
+                <div class="close-menu" id="close-menu">&times;</div>
+            </li>
+
+            <!-- Menu Links -->
+            <li><a href="../index.html">Beranda</a></li>
             <li><a href="#">Tipe Properti</a></li>
-            <li><a href="#">Area</a></li>
-            <li><a href="#">Galeri</a></li>
             <li><a href="#">Kontak</a></li>
         </ul>
 
@@ -34,15 +52,27 @@
         <div class="slider">
 
             <div class="slides">
-                <img src="images/rumah-indent-padang-keling-banyuning/rumah-indent-padang-keling-banyuning-001.jpg">
+                <img src="../assets/img/properti/rumah-indent-banyuning-jalan-pulau-batam-premium-01.jpg">
             </div>
 
             <div class="slides">
-                <img src="images/rumah-indent-padang-keling-banyuning/rumah-indent-padang-keling-banyuning-002.jpg">
+                <img src="../assets/img/properti/rumah-indent-banyuning-jalan-pulau-batam-premium-02.jpg">
             </div>
 
             <div class="slides">
-                <img src="images/rumah-indent-padang-keling-banyuning/rumah-indent-padang-keling-banyuning-003.jpg">
+                <img src="../assets/img/properti/rumah-indent-banyuning-jalan-pulau-batam-premium-03.jpg">
+            </div>
+
+            <div class="slides">
+                <img src="../assets/img/properti/rumah-indent-banyuning-jalan-pulau-batam-premium-04.jpg">
+            </div>
+
+            <div class="slides">
+                <img src="../assets/img/properti/rumah-indent-banyuning-jalan-pulau-batam-premium-05.jpg">
+            </div>
+
+            <div class="slides">
+                <img src="../assets/img/properti/rumah-indent-banyuning-jalan-pulau-batam-premium-06.jpg">
             </div>
 
             <div class="prev" onclick="plusSlides(-1)">❮</div>
@@ -53,13 +83,17 @@
         <!-- PANEL DETAIL KANAN -->
         <div class="property-card">
 
-            <h1>Rumah Indent Padang Keling - Banyuning</h1>
+            <h1>Rumah Indent Banyuning Jalan Pulau Batam - Premium</h1>
 
-            <div class="price">Rp 375 Juta</div>
+            <div class="price">Rp 450 Juta</div>
+
+            <a href="https://wa.me/6282335959209" target="_blank" class="btn-wa">
+                Hubungi via WhatsApp
+            </a>
 
             <h3>Spesifikasi:</h3>
             <ul>
-                <li>Type 38/80</li>
+                <li>Type Standar 36/100</li>
                 <li>2 Kamar Tidur</li>
                 <li>1 Kamar Mandi</li>
                 <li>Carport</li>
@@ -67,43 +101,39 @@
                 <li>Air PDAM</li>
             </ul>
 
-            <a href="https://wa.me/6282335959209" target="_blank" class="btn-wa">
-                Hubungi via WhatsApp
-            </a>
+            <h2>Deskripsi</h2>
+            <p>
+            Pulau Batam Punglor Premium hadir dengan konsep hunian minimalis modern yang menawarkan kenyamanan lebih karena memiliki luas tanah lebih besar (100 m²) dibanding tipe standar pada umumnya.
+            </p>
+
+            <p>
+            Dengan total hanya 40 unit, perumahan ini memberikan suasana yang lebih eksklusif dan tertata. Sangat cocok bagi Anda yang menginginkan rumah pertama dengan halaman lebih lega untuk taman, area santai, atau pengembangan bangunan ke depan.
+            </p>
+
+            <p>Lingkungan berkembang, akses mudah, serta potensi kenaikan nilai properti menjadikan unit ini menarik untuk ditempati maupun sebagai investasi.</p>
+
+            <h2 class="video-title">🎥 Video Preview</h2>
+
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/kr8at4PRL1g"
+            title="Video Rumah Indent Banyuning"
+            allowfullscreen>
+            </iframe>
+</div>
+              
 
         </div>
 
+        
     </div>
 
 </div>
 
-<script>
-let slideIndex = 0;
-showSlides();
+<div class="wrapper">
+   <!-- isi slider -->
+</div>
 
-function plusSlides(n) {
-    slideIndex += n;
-    showSlides();
-}
-
-function showSlides() {
-    let slides = document.getElementsByClassName("slides");
-
-    if (slideIndex >= slides.length) { slideIndex = 0 }
-    if (slideIndex < 0) { slideIndex = slides.length - 1 }
-
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-
-    slides[slideIndex].style.display = "block";
-}
-
-setInterval(function(){
-    slideIndex++;
-    showSlides();
-}, 5000);
-</script>
-
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/slider.js"></script>
 </body>
 </html>

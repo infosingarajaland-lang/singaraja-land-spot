@@ -13,26 +13,38 @@
 <body>
 
 <nav class="navbar">
-  <div class="nav-container">
+    <div class="nav-container">
 
-    <div class="brand">
-      <img src="assets/img/logo/logo-primary.png" alt="Logo">
-      <h1>Singaraja Land Spot</h1>
+        <!-- Logo Utama di Navbar Atas -->
+        <div class="logo">
+            <img src="assets/img/logo/logo-primary.png" alt="Logo">
+            <span></span>
+        </div>
+
+        <!-- Tombol Burger -->
+        <div class="menu-toggle" id="menu-toggle">
+            ☰
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+            
+            <!-- HEADER SIDEBAR (Hanya muncul di HP) -->
+            <li class="sidebar-header">
+                <div class="brand">
+                    <img src="assets/img/logo/logo-primary.png" alt="Logo">
+                    
+                </div>
+                <!-- Penting: Pastikan ada id="close-menu" -->
+                <div class="close-menu" id="close-menu">&times;</div>
+            </li>
+
+            <!-- Menu Links -->
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="#">Tipe Properti</a></li>
+            <li><a href="#">Kontak</a></li>
+        </ul>
+
     </div>
-
-    <div class="menu-toggle" id="menu-toggle">
-      ☰
-    </div>
-
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#">Beranda</a></li>
-      <li><a href="#">Tipe Properti</a></li>
-      <li><a href="#">Area</a></li>
-      <li><a href="#">Galeri</a></li>
-      <li><a href="#">Kontak</a></li>
-    </ul>
-
-  </div>
 </nav>
 
 <div class="overlay" id="overlay"></div>
@@ -46,13 +58,13 @@
 
         <h1>
             Listing Pilihan <br>
-            <span>Terbaik & Legal</span> <br>
+            <span>Lapak Property Menarik</span> <br>
             di Singaraja.
         </h1>
 
         <p class="hero-desc">
-            Temukan investasi properti terbaik dengan lokasi strategis,
-            legalitas aman, dan harga kompetitif.
+            Temukan investasi properti dengan lokasi strategis,
+            Nyaman, dan harga kompetitif.
         </p>
 
         <a href="#listing" class="hero-btn">Lihat Penawaran</a>
@@ -60,22 +72,69 @@
 
 </section>
 
-<div class="container">
+<!-- ... </section> hero berakhir di sini -->
+
+<!-- SEARCH FILTER SECTION -->
+<section class="search-filter-section">
+    <form class="search-filter-box" id="propertyFilterForm">
+        
+        <!-- Input 1: Cari Properti -->
+        <div class="filter-group">
+            <label>CARI PROPERTI</label>
+            <input type="text" placeholder="Cari judul, kata kunci..." name="keyword">
+        </div>
+
+        <!-- Input 2: Tipe Properti -->
+        <div class="filter-group">
+            <label>TIPE PROPERTI</label>
+            <select name="tipe">
+                <option value="">Pilih Tipe</option>
+                <option value="rumah-indent">Rumah Indent</option>
+                <option value="rumah-second">Rumah Second</option>
+                <option value="tanah">Tanah</option>
+            </select>
+        </div>
+
+        <!-- Input 3: Lokasi -->
+        <div class="filter-group">
+            <label>LOKASI</label>
+            <select name="lokasi">
+                <option value="">Pilih Area</option>
+                <option value="banyuning">Banyuning</option>
+                <option value="sambangan">Sambangan</option>
+            </select>
+        </div>
+
+        <!-- Tombol Cari -->
+        <button type="submit" class="btn-search-submit">CARI SEKARANG</button>
+        
+    </form>
+</section>
+
+<!-- <div class="container" id="listing"> dimulai di sini... -->
+
+<div class="container" id="listing">
 
     <div class="grid">
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994" alt="Rumah Indent Banyuning Jalan Pulau Batam - Premium">
+        <div class="card"
+            data-title="rumah indent banyuning jalan pulau batam premium"
+            data-tipe="rumah-indent"
+            data-lokasi="banyuning">
+            <img src="assets/img/properti/rumah-indent-banyuning-jalan-pulau-batam-premium-01.jpg" alt="Rumah Indent Banyuning Jalan Pulau Batam - Premium">
             <a href="properti/rumah-indent-banyuning-jalan-pulau-batam-premium.html" class="btn-detail">Lihat Detail</a>
 
             <h2>Rumah Indent Banyuning Jalan Pulau Batam - Premium</h2>
-            <p>Type Standar 36/80</p>
+            <p>Type Standar 36/100</p>
             <p>2 KT | 1 KM</p>
             <p class="price">Rp 450 Juta</p>
             <a href="https://wa.me/6282335959209" target="_blank" class="btn">Chat WhatsApp</a>
         </div>
 
-        <div class="card">
+        <div class="card"
+            data-title="rumah indent banyuning punglor 3"
+            data-tipe="rumah-indent"
+            data-lokasi="banyuning">
             <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae" alt="Rumah Indent Banyuning Jalan Pulau Batam - Punglor 3">
             <a href="properti/rumah-indent-banyuning-jalan-pulau-batam-punglor-3.html" class="btn-detail">Lihat Detail</a>
 
@@ -86,7 +145,10 @@
             <a href="https://wa.me/6281234567890" target="_blank" class="btn">Chat WhatsApp</a>
         </div>
 
-        <div class="card">
+        <div class="card"
+            data-title="rumah indent padang keling banyuning"
+            data-tipe="rumah-indent"
+            data-lokasi="banyuning">
             <img src="assets/img/properti/rumah-indent-padang-keling-banyuning-01.jpg" alt="Rumah Indent Padang Keling - Banyuning">
             <a href="properti/rumah-indent-padang-keling-banyuning.html" class="btn-detail">Lihat Detail</a>
 
