@@ -73,12 +73,12 @@ body {
   color: #22c55e;
 }
 
-/* Sembunyikan header sidebar di desktop */
+/* untuk hp Sembunyikan header sidebar di desktop */
 .nav-links .sidebar-header {
   display: none;
 }
 
-/* BURGER */
+/* untuk hp BURGER */
 .menu-toggle {
   display: none;
   font-size: 26px;
@@ -86,7 +86,7 @@ body {
   color: #fff;
 }
 
-/* OVERLAY */
+/* untuk hp OVERLAY */
 .overlay {
   position: fixed;
   width: 100%;
@@ -103,6 +103,47 @@ body {
 .overlay.active {
   opacity: 1;
   visibility: visible;
+}
+
+/* ===============================
+   DROPDOWN MENU TIPE PROPERTI
+=================================*/
+
+.dropdown{
+position:relative;
+}
+
+.dropdown-menu{
+display:none;
+position:absolute;
+background:#1e293b;
+list-style:none;
+padding:10px 0;
+top:100%;
+left:0;
+min-width:180px;
+border-radius:6px;
+box-shadow:0 6px 20px rgba(0,0,0,0.4);
+}
+
+.dropdown-menu li{
+padding:0;
+}
+
+.dropdown-menu a{
+display:block;
+padding:10px 20px;
+color:#fff;
+font-size:14px;
+}
+
+.dropdown-menu a:hover{
+background:#0f172a;
+color:#22c55e;
+}
+
+.dropdown:hover .dropdown-menu{
+display:block;
 }
 
 /* ===============================
@@ -257,7 +298,7 @@ body {
 }
 
 /* ===============================
-   GRID LISTING
+   GRID LISTING (tampilan card di index)
 =================================*/
 .container {
   max-width: 1200px;
@@ -375,11 +416,6 @@ body {
   color: #22c55e;
 }
 
-.property-card ul {
-  margin: 15px 0;
-  padding-left: 20px;
-}
-
 .btn-wa {
   display: inline-block;
   background: #22c55e;
@@ -391,19 +427,57 @@ body {
 }
 
 /* ===============================
-   DETAIL PROPERTY SPACING
+   DETAIL PROPERTY SPACING (keterangan halaman detail)
 ================================ */
 
-/* Jarak antar section spesifikasi property */
-.property-card h3 {
-margin-top: 30px;
-margin-bottom: 10px;
+.property-card h2 {
+  font-size: 25px;
+  margin-top: 27px;
+  margin-bottom: 10px;
+  color: #fff;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 8px;
 }
 
-/* Jarak antar section property */
-.property-card h2 {
-margin-top: 30px;
-margin-bottom: 10px;
+.property-card h3 {
+  font-size: 20px;
+  margin-top: 22px;
+  margin-bottom: 10px;
+  color: #fff;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 8px;
+  padding-left: 15px;
+}
+
+.property-card h4 {
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  color: #22c55e;
+  font-weight: bold;
+  padding-left: 19px;
+}
+
+.property-card ul {
+  list-style: none;
+  margin: 15px 0;
+  padding-left: 20px;
+}
+
+.property-card li {
+  position: relative;
+  padding-left: 25px; /* Beri ruang untuk ikon di kiri */
+  margin-bottom: 2px;
+  color: #cbd5e1;
+}
+
+/* Membuat ikon centang palsu sebelum teks */
+.property-card li::before {
+  content: "✔"; /* Bisa diganti dengan kode icon lain */
+  position: absolute;
+  left: 0;
+  color: #22c55e; /* Warna hijau */
+  font-size: 14px;
 }
 
 /* Jarak paragraf deskripsi */
@@ -448,6 +522,38 @@ border: none;
   height: 100%;
   border: 0;
 }
+
+/* ===============================
+   TIKTOK VIDEO CLEAN
+================================ */
+
+.tiktok-wrapper{
+max-width:380px;
+margin:30px auto;
+}
+
+.tiktok-wrapper iframe{
+width:100%;
+height:680px;
+border:none;
+border-radius:12px;
+box-shadow:0 6px 20px rgba(0,0,0,0.25);
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+.tiktok-wrapper{
+max-width:100%;
+padding:0 10px;
+}
+
+.tiktok-wrapper iframe{
+height:620px;
+}
+
+}
+
 
 /* ===============================
    RESPONSIVE
@@ -566,4 +672,182 @@ border: none;
     padding-left: 30px;
   }
   
+}
+
+/* ===============================
+   CONTACT PAGE STYLE
+=================================*/
+.contact-wrapper {
+    max-width: 1200px;
+    margin: 120px auto 50px;
+    padding: 20px;
+}
+
+.contact-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.contact-subtitle {
+    text-align: center;
+    color: #94a3b8;
+    margin-bottom: 40px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 Kolom sama lebar */
+    gap: 40px;
+    align-items: stretch;
+}
+
+/* -- KOLOM INFO -- */
+.contact-info {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #334155;
+}
+
+.contact-info h3 {
+    font-size: 20px;
+    color: #22c55e;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 10px;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-info li {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.contact-info .icon {
+    font-size: 24px;
+    margin-top: 5px;
+}
+
+.contact-info .text {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info .text strong {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.contact-info .text a,
+.contact-info .text span {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.contact-info .text a:hover {
+    color: #22c55e;
+}
+
+.contact-info .status {
+    font-size: 12px !important;
+    color: #22c55e !important;
+    margin-top: 2px;
+    font-style: italic;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #334155;
+}
+
+.social-icons a {
+    background: #0f172a;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    background: #22c55e;
+}
+
+/* -- KOLOM FORM -- */
+.contact-form-box {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #334155;
+}
+
+.contact-form-box h3 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    background: #0f172a;
+    border: 1px solid #334155;
+    color: #fff;
+    padding: 12px;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #22c55e;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background: #22c55e;
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background: #16a34a;
+}
+
+/* -- RESPONSIVE KONTAK -- */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr; /* Jadi 1 kolom di HP */
+    }
+    
+    .contact-wrapper {
+        margin-top: 100px;
+    }
 }
