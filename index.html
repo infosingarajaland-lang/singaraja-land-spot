@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/main.css">    
+    <link rel="stylesheet" href="assets/css/main.css">
     <title>Singaraja Land Spot</title>
     <meta charset="UTF-8">
     <meta name="description" content="Listing Properti Terbaik di Singaraja, Bali Utara">
@@ -12,198 +13,211 @@
 
 <body>
 
-<nav class="navbar">
-    <div class="nav-container">
+    <nav class="navbar">
+        <div class="nav-container">
 
-        <!-- Logo Utama di Navbar Atas -->
-        <div class="logo">
-            <img src="assets/img/logo/logo-primary.png" alt="Logo">
-            <span></span>
+            <!-- Logo Utama di Navbar Atas -->
+            <div class="logo">
+                <img src="assets/img/logo/logo-primary.png" alt="Logo">
+                <span></span>
+            </div>
+
+            <!-- Tombol Burger -->
+            <div class="menu-toggle" id="menu-toggle">
+                ☰
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+
+                <!-- HEADER SIDEBAR (Hanya muncul di HP) -->
+                <li class="sidebar-header">
+                    <div class="brand">
+                        <img src="assets/img/logo/logo-primary.png" alt="Logo">
+
+                    </div>
+                    <!-- Penting: Pastikan ada id="close-menu" -->
+                    <div class="close-menu" id="close-menu">&times;</div>
+                </li>
+
+                <!-- Menu Links -->
+                <li><a href="index.html">Beranda</a></li>
+                <li class="dropdown">
+                    <a href="#">Tipe Properti</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tipe/rumah-indent.html">Rumah Indent</a></li>
+                        <li><a href="tipe/rumah-second.html">Rumah Second</a></li>
+                        <li><a href="tipe/tanah.html">Tanah</a></li>
+                    </ul>
+                </li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <div class="overlay" id="overlay"></div>
+
+    <section class="hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <p class="hero-tag">Eksklusif Properti di Bali Utara</p>
+
+            <h1>
+                Listing Pilihan <br>
+                <span>Lapak Property Menarik</span> <br>
+                di Singaraja.
+            </h1>
+
+            <p class="hero-desc">
+                Temukan investasi properti dengan lokasi strategis,
+                Nyaman, dan harga kompetitif.
+            </p>
+
+            <a href="#listing" class="hero-btn">Lihat Penawaran</a>
         </div>
 
-        <!-- Tombol Burger -->
-        <div class="menu-toggle" id="menu-toggle">
-            ☰
+    </section>
+
+    <!-- ... </section> hero berakhir di sini -->
+
+    <!-- SEARCH FILTER SECTION -->
+    <section class="search-filter-section">
+        <form class="search-filter-box" id="propertyFilterForm">
+
+            <!-- Input 1: Cari Properti -->
+            <div class="filter-group">
+                <label>CARI PROPERTI</label>
+                <input type="text" placeholder="Cari judul, kata kunci..." name="keyword">
+            </div>
+
+            <!-- Input 2: Tipe Properti -->
+            <div class="filter-group">
+                <label>TIPE PROPERTI</label>
+                <select name="tipe">
+                    <option value="">Pilih Tipe</option>
+                    <option value="rumah-indent">Rumah Indent</option>
+                    <option value="rumah-second">Rumah Second</option>
+                    <option value="tanah">Tanah</option>
+                </select>
+            </div>
+
+            <!-- Input 3: Lokasi -->
+            <div class="filter-group">
+                <label>LOKASI</label>
+                <select name="lokasi">
+                    <option value="">Pilih Area</option>
+                    <option value="banyuning">Banyuning</option>
+                    <option value="sambangan">Sambangan</option>
+                    <option value="panji">Panji</option>
+                </select>
+            </div>
+
+            <!-- Tombol Cari -->
+            <button type="submit" class="btn-search-submit">CARI SEKARANG</button>
+
+        </form>
+    </section>
+
+    <!-- <div class="container" id="listing"> dimulai di sini... -->
+
+    <div class="container" id="listing">
+
+        <div class="grid">
+
+            <div class="card" data-title="rumah indent banyuning jalan pulau batam premium" data-tipe="rumah-indent"
+                data-lokasi="banyuning">
+                <img src="assets/img/properti/rumah-indent-banyuning-jalan-pulau-batam-premium-01.jpg"
+                    alt="Rumah Indent Banyuning Jalan Pulau Batam - Premium">
+                <a href="properti/rumah-indent-banyuning-jalan-pulau-batam-premium.html" class="btn-detail">Lihat
+                    Detail</a>
+
+                <h2>Rumah Indent Banyuning Jalan Pulau Batam - Premium</h2>
+                <p>Type Standar 36/100</p>
+                <p>2 KT | 1 KM</p>
+                <p class="price">Rp 450 Juta</p>
+                <a href="https://wa.me/6282335959209" target="_blank" class="btn">Chat WhatsApp</a>
+            </div>
+
+            <div class="card" data-title="rumah indent banyuning punglor 3" data-tipe="rumah-indent"
+                data-lokasi="banyuning">
+                <img src="assets/img/properti/rumah-indent-banyuning-jalan-pulau-batam-punglor-3-01.jpg"
+                    alt="Rumah Indent Banyuning Jalan Pulau Batam - Punglor 3">
+                <a href="properti/rumah-indent-banyuning-jalan-pulau-batam-punglor-3.html" class="btn-detail">Lihat
+                    Detail</a>
+
+                <h2>Rumah Indent Banyuning Jalan Pulau Batam - Punglor 3</h2>
+                <p>Type Standar 36/80</p>
+                <p>2 KT | 1 KM</p>
+                <p class="price">Rp 415 Juta</p>
+                <a href="https://wa.me/6281234567890" target="_blank" class="btn">Chat WhatsApp</a>
+            </div>
+
+            <div class="card" data-title="rumah indent padang keling banyuning" data-tipe="rumah-indent"
+                data-lokasi="banyuning">
+                <img src="assets/img/properti/rumah-indent-padang-keling-banyuning-01.jpg"
+                    alt="Rumah Indent Padang Keling - Banyuning">
+                <a href="properti/rumah-indent-padang-keling-banyuning.html" class="btn-detail">Lihat Detail</a>
+
+                <h2>Rumah Indent Padang Keling - Banyuning</h2>
+                <p>Type Standar 36/80</p>
+                <p>2 KT | 1 KM</p>
+                <p class="price">Rp 375 Juta</p>
+                <a href="https://wa.me/6282335959209" target="_blank" class="btn">Chat WhatsApp</a>
+            </div>
+
+            <div class="card" data-title="rumah indent banyuning jalan pulau obi buleleng" data-tipe="rumah-indent"
+                data-lokasi="banyuning">
+                <img src="assets/img/properti/rumah-indent-banyuning-jalan-pulau-obi-buleleng-01.jpeg"
+                    alt="Rumah Indent Banyuning Jalan Pulau Obi - Buleleng">
+                <a href="properti/rumah-indent-banyuning-jalan-pulau-obi-buleleng.html" class="btn-detail">Lihat
+                    Detail</a>
+
+                <h2>Rumah Indent Banyuning Jalan Pulau Obi - Buleleng</h2>
+                <p>Type Standar 40/80</p>
+                <p>2 KT | 1 KM</p>
+                <p class="price">Rp 395 Juta</p>
+                <a href="https://wa.me/6282335959209" target="_blank" class="btn">Chat WhatsApp</a>
+            </div>
+
+            <div class="card" data-title="rumah second terawat panji buleleng" data-tipe="rumah-second"
+                data-lokasi="panji">
+                <div class="label-terjual">TERJUAL</div>
+                <img src="assets/img/properti/rumah-second-terawat-panji-buleleng-01.jpg"
+                    alt="Rumah Second Terawat Panji - Buleleng">
+                <a href="properti/rumah-second-terawat-panji-buleleng.html" class="btn-detail">Lihat Detail</a>
+
+                <h2>Rumah Second Terawat Panji - Buleleng</h2>
+                <p>Luas Tanah 90 m²</p>
+                <p>2 Lantai, 3 KT | 1 KM</p>
+                <p class="price">Rp 450 Juta</p>
+                <a href="https://wa.me/6282335959209" target="_blank" class="btn">Chat WhatsApp</a>
+            </div>
+
+            <div class="card" data-title="tanah daerah sambangan jalan pulau tasbih buleleng" data-tipe="tanah"
+                data-lokasi="sambangan">
+                <img src="assets/img/properti/tanah-daerah-sambangan-jalan-pulau-tasbih-buleleng-01.jpg"
+                    alt="Tanah Daerah Sambangan Jalan Pulau Tasbih - Buleleng">
+                <a href="properti/tanah-daerah-sambangan-jalan-pulau-tasbih-buleleng.html" class="btn-detail">Lihat
+                    Detail</a>
+
+                <h2>Tanah Daerah Sambangan Jalan Pulau Tasbih - Buleleng</h2>
+                <p>Luas Tanah 2 Are</p>
+                <p class="price">Rp 125 Juta / Are</p>
+                <a href="https://wa.me/6282335959209" target="_blank" class="btn">Chat WhatsApp</a>
+            </div>
+
         </div>
-
-        <ul class="nav-links" id="nav-links">
-            
-            <!-- HEADER SIDEBAR (Hanya muncul di HP) -->
-            <li class="sidebar-header">
-                <div class="brand">
-                    <img src="assets/img/logo/logo-primary.png" alt="Logo">
-                    
-                </div>
-                <!-- Penting: Pastikan ada id="close-menu" -->
-                <div class="close-menu" id="close-menu">&times;</div>
-            </li>
-
-            <!-- Menu Links -->
-            <li><a href="index.html">Beranda</a></li>
-            <li class="dropdown">
-                <a href="#">Tipe Properti</a>
-                <ul class="dropdown-menu">
-                <li><a href="tipe/rumah-indent.html">Rumah Indent</a></li>
-                <li><a href="tipe/rumah-second.html">Rumah Second</a></li>
-                <li><a href="tipe/tanah.html">Tanah</a></li>
-                </ul>
-            </li>
-            <li><a href="kontak.html">Kontak</a></li>
-        </ul>
 
     </div>
-</nav>
 
-<div class="overlay" id="overlay"></div>
+    <footer>
 
-<section class="hero">
+    </footer>
 
-    <div class="hero-overlay"></div>
-
-    <div class="hero-content">
-        <p class="hero-tag">Eksklusif Properti di Bali Utara</p>
-
-        <h1>
-            Listing Pilihan <br>
-            <span>Lapak Property Menarik</span> <br>
-            di Singaraja.
-        </h1>
-
-        <p class="hero-desc">
-            Temukan investasi properti dengan lokasi strategis,
-            Nyaman, dan harga kompetitif.
-        </p>
-
-        <a href="#listing" class="hero-btn">Lihat Penawaran</a>
-    </div>
-
-</section>
-
-<!-- ... </section> hero berakhir di sini -->
-
-<!-- SEARCH FILTER SECTION -->
-<section class="search-filter-section">
-    <form class="search-filter-box" id="propertyFilterForm">
-        
-        <!-- Input 1: Cari Properti -->
-        <div class="filter-group">
-            <label>CARI PROPERTI</label>
-            <input type="text" placeholder="Cari judul, kata kunci..." name="keyword">
-        </div>
-
-        <!-- Input 2: Tipe Properti -->
-        <div class="filter-group">
-            <label>TIPE PROPERTI</label>
-            <select name="tipe">
-                <option value="">Pilih Tipe</option>
-                <option value="rumah-indent">Rumah Indent</option>
-                <option value="rumah-second">Rumah Second</option>
-                <option value="tanah">Tanah</option>
-            </select>
-        </div>
-
-        <!-- Input 3: Lokasi -->
-        <div class="filter-group">
-            <label>LOKASI</label>
-            <select name="lokasi">
-                <option value="">Pilih Area</option>
-                <option value="banyuning">Banyuning</option>
-                <option value="sambangan">Sambangan</option>
-                <option value="panji">Panji</option>
-            </select>
-        </div>
-
-        <!-- Tombol Cari -->
-        <button type="submit" class="btn-search-submit">CARI SEKARANG</button>
-        
-    </form>
-</section>
-
-<!-- <div class="container" id="listing"> dimulai di sini... -->
-
-<div class="container" id="listing">
-
-    <div class="grid">
-
-        <div class="card"
-            data-title="rumah indent banyuning jalan pulau batam premium"
-            data-tipe="rumah-indent"
-            data-lokasi="banyuning">
-            <img src="assets/img/properti/rumah-indent-banyuning-jalan-pulau-batam-premium-01.jpg" alt="Rumah Indent Banyuning Jalan Pulau Batam - Premium">
-            <a href="properti/rumah-indent-banyuning-jalan-pulau-batam-premium.html" class="btn-detail">Lihat Detail</a>
-
-            <h2>Rumah Indent Banyuning Jalan Pulau Batam - Premium</h2>
-            <p>Type Standar 36/100</p>
-            <p>2 KT | 1 KM</p>
-            <p class="price">Rp 450 Juta</p>
-            <a href="https://wa.me/6282335959209" target="_blank" class="btn">Chat WhatsApp</a>
-        </div>
-
-        <div class="card"
-            data-title="rumah indent banyuning punglor 3"
-            data-tipe="rumah-indent"
-            data-lokasi="banyuning">
-            <img src="assets/img/properti/rumah-indent-banyuning-jalan-pulau-batam-punglor-3-01.jpg" alt="Rumah Indent Banyuning Jalan Pulau Batam - Punglor 3">
-            <a href="properti/rumah-indent-banyuning-jalan-pulau-batam-punglor-3.html" class="btn-detail">Lihat Detail</a>
-
-            <h2>Rumah Indent Banyuning Jalan Pulau Batam - Punglor 3</h2>
-            <p>Type Standar 36/80</p>
-            <p>2 KT | 1 KM</p>
-            <p class="price">Rp 415 Juta</p>
-            <a href="https://wa.me/6281234567890" target="_blank" class="btn">Chat WhatsApp</a>
-        </div>
-
-        <div class="card"
-            data-title="rumah indent padang keling banyuning"
-            data-tipe="rumah-indent"
-            data-lokasi="banyuning">
-            <img src="assets/img/properti/rumah-indent-padang-keling-banyuning-01.jpg" alt="Rumah Indent Padang Keling - Banyuning">
-            <a href="properti/rumah-indent-padang-keling-banyuning.html" class="btn-detail">Lihat Detail</a>
-
-            <h2>Rumah Indent Padang Keling - Banyuning</h2>
-            <p>Type Standar 36/80</p>
-            <p>2 KT | 1 KM</p>
-            <p class="price">Rp 375 Juta</p>
-            <a href="https://wa.me/6282335959209" target="_blank" class="btn">Chat WhatsApp</a>
-        </div>
-
-        <div class="card"
-            data-title="rumah second terawat panji buleleng"
-            data-tipe="rumah-second"
-            data-lokasi="panji">
-            <div class="label-terjual">TERJUAL</div>
-            <img src="assets/img/properti/rumah-second-terawat-panji-buleleng-01.jpg" alt="Rumah Second Terawat Panji - Buleleng">
-            <a href="properti/rumah-second-terawat-panji-buleleng.html" class="btn-detail">Lihat Detail</a>
-
-            <h2>Rumah Second Terawat Panji - Buleleng</h2>
-            <p>Luas Tanah 90 m²</p>
-            <p>2 Lantai, 3 KT | 1 KM</p>
-            <p class="price">Rp 450 Juta</p>
-            <a href="https://wa.me/6282335959209" target="_blank" class="btn">Chat WhatsApp</a>
-        </div>
-
-        <div class="card"
-            data-title="tanah daerah sambangan jalan pulau tasbih buleleng"
-            data-tipe="tanah"
-            data-lokasi="sambangan">
-            <img src="assets/img/properti/tanah-daerah-sambangan-jalan-pulau-tasbih-buleleng-01.jpg" alt="Tanah Daerah Sambangan Jalan Pulau Tasbih - Buleleng">
-            <a href="properti/tanah-daerah-sambangan-jalan-pulau-tasbih-buleleng.html" class="btn-detail">Lihat Detail</a>
-
-            <h2>Tanah Daerah Sambangan Jalan Pulau Tasbih - Buleleng</h2>
-            <p>Luas Tanah 2 Are</p>
-            <p class="price">Rp 125 Juta / Are</p>
-            <a href="https://wa.me/6282335959209" target="_blank" class="btn">Chat WhatsApp</a>
-        </div>
-
-    </div>
-
-</div>
-
-<footer>
-    
-</footer>
-
-<script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
 
 </body>
+
 </html>
