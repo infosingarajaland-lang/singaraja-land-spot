@@ -2,21 +2,13 @@ const menuToggle = document.getElementById("menu-toggle");
 const navLinks = document.getElementById("nav-links");
 const overlay = document.getElementById("overlay");
 const closeMenu = document.getElementById("close-menu");
-
-// 1. Buka Menu
-menuToggle.addEventListener("click", () => {
-  navLinks.classList.add("active");
-  overlay.classList.add("active");
-});
-
-// ===============================
-// PROPERTY FILTER
-// ===============================
-
 const filterForm = document.getElementById("propertyFilterForm");
 
+// ===============================
+// PROPERTY FILTER DEKSTOP
+// ===============================
 if (filterForm) {
-  filterForm.addEventListener("submit", function(e) {
+  filterForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
     const keyword = this.keyword.value.toLowerCase();
@@ -45,13 +37,26 @@ if (filterForm) {
   });
 }
 
-// 2. Tutup via Overlay
-overlay.addEventListener("click", () => {
-  navLinks.classList.remove("active");
-  overlay.classList.remove("active");
-});
+// ===============================
+// PROPERTY FILTER BURGER HP
+// ===============================
+// ✅ Buka menu (SAFE)
+if (menuToggle) {
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.add("active");
+    overlay.classList.add("active");
+  });
+}
 
-// 3. Tutup via Tombol X 
+// ✅ Tutup via overlay
+if (overlay) {
+  overlay.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+}
+
+// ✅ Tutup via tombol X
 if (closeMenu) {
   closeMenu.addEventListener("click", () => {
     navLinks.classList.remove("active");
