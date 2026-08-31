@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://singaraja-land-spot.vercel.app/sitemap.xml

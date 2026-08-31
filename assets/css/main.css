@@ -9,7 +9,7 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: #0f172a;
+  background: #1e293b;
   color: #fff;
   line-height: 1.6;
 }
@@ -22,7 +22,7 @@ body {
   width: 100%;
   top: 0;
   left: 0;
-  background: rgba(15, 23, 42, 0.95);
+  background: rgba(30, 41, 59, 0.92);
   backdrop-filter: blur(10px);
   z-index: 1000;
 }
@@ -116,7 +116,7 @@ body {
 .dropdown-menu {
   display: none;
   position: absolute;
-  background: #1e293b;
+  background: #334155;
   list-style: none;
   padding: 10px 0;
   top: 100%;
@@ -138,7 +138,7 @@ body {
 }
 
 .dropdown-menu a:hover {
-  background: #0f172a;
+  background: #334155;
   color: #22c55e;
 }
 
@@ -165,7 +165,7 @@ body {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.65);
 }
 
 .hero-content {
@@ -174,7 +174,7 @@ body {
 }
 
 .hero-tag {
-  color: #22c55e;
+  color: #facc15;
   margin-bottom: 10px;
 }
 
@@ -185,7 +185,7 @@ body {
 }
 
 .hero span {
-  color: #22c55e;
+  color: #facc15;
 }
 
 .hero-desc {
@@ -195,7 +195,7 @@ body {
 .hero-btn {
   display: inline-block;
   padding: 10px 20px;
-  background: #22c55e;
+  background: #facc15;
   color: #000;
   text-decoration: none;
   border-radius: 6px;
@@ -206,7 +206,7 @@ body {
    SEARCH FILTER SECTION
 =================================*/
 .search-filter-section {
-  background: #0f172a;
+  background: #1e293b;
   /* Samakan dengan body atau buat sedikit kontras */
   padding: 0 20px;
 
@@ -218,7 +218,7 @@ body {
 }
 
 .search-filter-box {
-  background: #1e293b;
+  background: #334155;
   /* Warna box form */
   padding: 25px;
   border-radius: 10px;
@@ -250,8 +250,8 @@ body {
 
 .filter-group input,
 .filter-group select {
-  background: #0f172a;
-  border: 1px solid #334155;
+  background: #334155;
+  border: 1px solid #475569;
   color: #fff;
   padding: 12px;
   border-radius: 6px;
@@ -326,18 +326,50 @@ body {
   gap: 25px;
 }
 
+.grid-category {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 360px));
+  justify-content: start;
+}
+
 .card {
-  background: #1e293b;
+  background: #334155;
   padding: 15px;
   border-radius: 10px;
   overflow: hidden;
   position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
 }
 
 .card img {
   width: 100%;
+  display: block;
   border-radius: 8px;
   margin-bottom: 10px;
+  transform: scale(1);
+  transition: transform 0.5s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover img {
+  transform: scale(1.08);
+}
+
+a.card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+a.card:focus-visible {
+  outline: 2px solid #22c55e;
+  outline-offset: 2px;
 }
 
 .card h2 {
@@ -398,6 +430,7 @@ body {
 .slider {
   width: 100%;
   position: relative;
+  overflow: hidden;
 }
 
 .slides {
@@ -433,7 +466,7 @@ body {
 /* PROPERTY CARD */
 .property-card {
   width: 100%;
-  background: #1e293b;
+  background: #334155;
   padding: 20px;
   border-radius: 10px;
   color: #fff;
@@ -443,19 +476,20 @@ body {
   margin-bottom: 10px;
 }
 
-/* label terjual halaman detail */
+/* label terjual halaman detail (gaya ribbon, sinkron dengan card) */
 .label-terjual-detail {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 12px;
+  left: -45px;
   background: red;
   color: white;
-  padding: 10px 18px;
-  font-size: 18px;
+  padding: 8px 55px;
+  font-size: 15px;
   font-weight: bold;
-  border-radius: 6px;
+  transform: rotate(-45deg);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   z-index: 5;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  white-space: nowrap;
 }
 
 /* slider harus relative */
@@ -490,7 +524,7 @@ body {
   margin-top: 27px;
   margin-bottom: 10px;
   color: #fff;
-  border-bottom: 1px solid #334155;
+  border-bottom: 1px solid #475569;
   padding-bottom: 8px;
 }
 
@@ -499,7 +533,7 @@ body {
   margin-top: 22px;
   margin-bottom: 10px;
   color: #fff;
-  border-bottom: 1px solid #334155;
+  border-bottom: 1px solid #475569;
   padding-bottom: 8px;
   padding-left: 15px;
 }
@@ -639,6 +673,76 @@ body {
     font-size: 28px;
   }
 
+  /* ===========================
+     DETAIL PROPERTY (MOBILE)
+     Hanya memengaruhi mobile.
+     Desktop (>=769px) tidak berubah.
+  ============================ */
+  .wrapper {
+    padding: 14px;
+  }
+
+  .property-layout {
+    gap: 20px;
+  }
+
+  .property-card {
+    padding: 16px;
+  }
+
+  .property-card h1 {
+    font-size: 22px;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+
+  .property-card .price {
+    font-size: 1.25em;
+    margin-bottom: 12px;
+  }
+
+  .property-card h2 {
+    font-size: 21px;
+    margin-top: 22px;
+    margin-bottom: 8px;
+  }
+
+  .property-card h3 {
+    font-size: 18px;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+
+  .property-card h4 {
+    font-size: 16px;
+  }
+
+  /* Label TERJUAL ribbon pada mobile (proporsional dgn foto) */
+  .label-terjual-detail {
+    top: 10px;
+    left: -40px;
+    padding: 7px 45px;
+    font-size: 13px;
+  }
+
+  /* Smartphone kecil */
+  @media (max-width: 420px) {
+    .property-card h1 {
+      font-size: 20px;
+    }
+
+    .property-card .price {
+      font-size: 1.2em;
+    }
+
+    .label-terjual-detail {
+      top: 8px;
+      left: -38px;
+      padding: 6px 42px;
+      font-size: 12px;
+    }
+  }
+
   .hero {
     height: auto;
     /* Di HP, tinggi menyesuaikan isi teks */
@@ -659,7 +763,7 @@ body {
     height: 100vh;
     width: 85%;
     max-width: 320px;
-    background: #0e0f12;
+    background: #18181b;
     padding: 0 0 40px 0;
     display: flex;
     flex-direction: column;
@@ -682,7 +786,7 @@ body {
     padding: 20px 25px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     margin-bottom: 10px;
-    background: #0e0f12;
+    background: #18181b;
   }
 
   .nav-links .sidebar-header .brand {
@@ -769,17 +873,17 @@ body {
 
 /* -- KOLOM INFO -- */
 .contact-info {
-  background: #1e293b;
+  background: #334155;
   padding: 30px;
   border-radius: 10px;
-  border: 1px solid #334155;
+  border: 1px solid #475569;
 }
 
 .contact-info h3 {
   font-size: 20px;
   color: #22c55e;
   margin-bottom: 25px;
-  border-bottom: 1px solid #334155;
+  border-bottom: 1px solid #475569;
   padding-bottom: 10px;
 }
 
@@ -834,11 +938,11 @@ body {
   gap: 10px;
   margin-top: 30px;
   padding-top: 20px;
-  border-top: 1px solid #334155;
+  border-top: 1px solid #475569;
 }
 
 .social-icons a {
-  background: #0f172a;
+  background: #334155;
   padding: 8px;
   border-radius: 50%;
   display: flex;
@@ -853,10 +957,10 @@ body {
 
 /* -- KOLOM FORM -- */
 .contact-form-box {
-  background: #1e293b;
+  background: #334155;
   padding: 30px;
   border-radius: 10px;
-  border: 1px solid #334155;
+  border: 1px solid #475569;
 }
 
 .contact-form-box h3 {
@@ -872,8 +976,8 @@ body {
 .form-group input,
 .form-group textarea {
   width: 100%;
-  background: #0f172a;
-  border: 1px solid #334155;
+  background: #334155;
+  border: 1px solid #475569;
   color: #fff;
   padding: 12px;
   border-radius: 6px;
@@ -915,4 +1019,33 @@ body {
   .contact-wrapper {
     margin-top: 100px;
   }
+}
+
+/* ===============================
+   WHATSAPP FLOATING BUTTON
+=================================*/
+.wa-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  transition: transform 0.3s ease;
+}
+
+.wa-float:hover {
+  transform: scale(1.1);
+}
+
+.wa-float svg {
+  width: 34px;
+  height: 34px;
+  fill: #ffffff;
 }
