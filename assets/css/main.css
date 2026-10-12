@@ -150,7 +150,7 @@ body {
    HERO SECTION
 =================================*/
 .hero {
-  min-height: 70vh;
+  min-height: 65vh;
   height: auto;
   padding: 120px 20px 80px 20px;
   background: url('../img/hero/hero.jpg') center/cover no-repeat;
@@ -159,7 +159,7 @@ body {
   padding: 0 20px;
   position: relative;
   margin-top: 70px;
-  margin-bottom: 40px;
+  margin-bottom: 0;
 }
 
 .hero-overlay {
@@ -206,13 +206,14 @@ body {
    SEARCH FILTER SECTION
 =================================*/
 .search-filter-section {
-  background: #1e293b;
-  /* Samakan dengan body atau buat sedikit kontras */
+  background: transparent;
+  /* Transparan: hilangkan pita gelap/tepi keras yang memotong foto hero */
   padding: 0 20px;
 
   position: relative;
   z-index: 20;
   max-width: 1200px;
+  margin-top: -42px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -228,7 +229,8 @@ body {
   gap: 15px;
   align-items: flex-end;
   /* Sejajar bawah */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  /* Bayangan lebih tipis & lembut supaya menyatu dengan hero */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
 }
 
 .filter-group {
@@ -286,8 +288,8 @@ body {
 /* RESPONSIVE SEARCH */
 @media (max-width: 768px) {
   .search-filter-section {
-    margin-top: 20px;
-    /* Hilangkan efek mengambang di HP */
+    margin-top: -20px;
+    /* Overlap ringan ke bawah hero di HP */
     padding: 0 15px;
   }
 
@@ -744,10 +746,12 @@ a.card:focus-visible {
   }
 
   .hero {
+    min-height: 70vh;
     height: auto;
     /* Di HP, tinggi menyesuaikan isi teks */
     padding: 100px 20px 60px 20px;
     /* Tambah padding agar tidak mepet */
+    margin-bottom: 40px;
   }
 
 
@@ -761,7 +765,7 @@ a.card:focus-visible {
     top: 0;
     left: -100%;
     height: 100vh;
-    width: 85%;
+    width: 75%;
     max-width: 320px;
     background: #18181b;
     padding: 0 0 40px 0;
